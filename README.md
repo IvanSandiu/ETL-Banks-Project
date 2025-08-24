@@ -34,17 +34,17 @@ Logging is also implemented to track progress at every stage.
 
 ## ⚙️ ETL Pipeline
 
-###Extract:
+**Extract**:
 Scrapes the table of the largest banks from a Wikipedia snapshot using BeautifulSoup.
 
-###Transform:
+**Transform**:
 Reads exchange rates from a CSV file and converts market capitalization values from USD to GBP, EUR, and INR.
 
-###Load:
+**Load**:
 - Saves results into a CSV file (Largest_banks_data.csv).
 - Loads data into a SQLite database (Banks.db).
 
-###SQL Queries:
+**SQL Queries**:
 Example queries executed in the script:
 - SELECT * FROM Largest_banks;
 - SELECT AVG(MC_GBP_Billion) FROM Largest_banks;
@@ -56,6 +56,7 @@ This project requires **Python 3.8+** and the following libraries:
 
 ```bash
 pip install pandas beautifulsoup4 requests numpy
+```
 
 ## 🚀 How to Run  
 
@@ -63,5 +64,6 @@ Clone the repository or download the script, then execute:
 
 ```bash
 python banks_project.py
+```
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
